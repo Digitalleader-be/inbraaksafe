@@ -1,0 +1,13 @@
+// -------------------------------------------------------------------
+// :: FIELDSET
+// -------------------------------------------------------------------
+
+fieldset{
+	border: none;
+	border-bottom: 1px solid $border-color;
+	padding: 2em;
+
+	&:last-child{
+		border-bottom: none;
+	}
+}

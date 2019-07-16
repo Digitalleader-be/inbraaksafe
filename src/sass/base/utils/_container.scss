@@ -1,0 +1,20 @@
+// -------------------------------------------------------------------
+// :: CONTAINER
+// -------------------------------------------------------------------
+.u-container {
+	@include clearfloat();
+	width: 90%;
+	max-width: $max-width;
+	position: relative;
+	margin: auto;
+	letter-spacing: -0.28em;
+	padding-left: 0;
+
+	> *{
+		letter-spacing: normal;
+	}
+}
+
+.u-container--center {
+	text-align: center;
+}

@@ -1,0 +1,61 @@
+// -------------------------------------------------------------------
+// :: ARTICLE
+// -------------------------------------------------------------------
+
+.o-article{
+	img{
+		width: 70%;
+		height: auto;
+		min-height: 300px;
+	}
+}
+
+
+.o-article__text{
+	padding: 2rem 0;
+
+	h2{
+		border-bottom: $border-simple;
+		padding-bottom: 1rem;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	@include FLOW-at($desktop){
+		padding: 4rem 0;
+
+		> *{
+			width: 70%;
+		}
+
+		h2{
+			margin-top: 4rem;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.o-article__image {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 300px;
+	width: 100%;
+}
+
+.o-article__tags {
+	color: $font-color-medium;
+	font-family: $font-family-tertiary;
+	font-weight: 300;
+
+	span {
+		margin-right: 30px;
+
+	}
+
+	a {
+		background-color: transparent;
+		font-weight: bold;
+		margin-right: 10px;
+	}
+}

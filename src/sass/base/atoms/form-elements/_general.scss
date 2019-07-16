@@ -1,0 +1,138 @@
+// -------------------------------------------------------------------
+// :: FORMS
+// -------------------------------------------------------------------
+// Every form should have an action- and method-attribute
+// The submit button should be added as input[type=submit]
+//
+// Every input should have a label with corresponding for-, id- and
+// name-attributes. Labels are always placed before inputs, nesting
+// is not allowed (except for checkboxes and radio's)
+
+@include FLOW-normalize-forms();
+
+
+// -------------------------------------------------------------------
+// :: BASE
+// -------------------------------------------------------------------
+
+%__input{
+	background-color: $grey-light;
+	color: $black;
+	padding: 0.4em 1.2em;
+	border: none;
+	width: 100%;
+	transition: border 100ms ease-in-out;
+	font-size: rem($font-size-mediumSmall);
+	height: $button-mobile-height;
+	&[type=submit] {
+		background-color: $orange;
+		width: 4rem;
+	}
+
+	@include FLOW-at($tablet){
+		font-size: rem($font-size-medium);
+		height: $button-secondary-height;
+	}
+
+	@include FLOW-input-placeholder() {
+		color: $dark;
+		font-family: $font-family-secondary;
+		font-size: rem($font-size-mediumSmall);
+
+		@include FLOW-at($tablet){
+			font-size: rem($font-size-medium);
+		}
+	}
+}
+
+.a-input {
+	@include clearfloat();
+	margin-bottom: 1.5em;
+}
+
+.a-input--nomargin {
+	margin-bottom: 0;
+}
+
+.a-input select,
+.a-input textarea,
+.a-input input:not(.a-button){
+	@extend %__input;
+}
+
+.a-input select,
+.a-input textarea{
+	width: 100%;
+	padding-top: 2rem;
+	padding-left: 2rem;
+}
+
+.a-input select:focus,
+.a-input textarea:focus,
+.a-input input:focus{
+	border-color: $border-color-active;
+}
+
+.a-input input[disabled],
+.a-input select[disabled],
+.a-input textarea[disabled],
+[class*='input__'][disabled] [class*='icon'] {
+	background-color: $border-color;
+}
+
+.a-input label{
+	font-weight: 100;
+	font-size: rem($font-size);
+	margin-bottom: 0.25rem;
+	display: block;
+}
+
+
+
+.a-input .a-input__field-holder {
+	position: relative;
+
+	.icon-arrow-down {
+		width: 0;
+		height: 0;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-top: 6px solid $black;
+		position: absolute;
+		right: 20px;
+		top: 25px;
+
+		@include FLOW-at($tablet){
+			top: 30px;
+		}
+	}
+}
+
+
+.a-input small:not(.a-tooltip){
+	padding: 0.85rem 0.25rem;
+}
+
+.a-input a {
+	position: relative;
+	z-index: 2;
+}
+
+// Resize options for textarea
+// vertical/horizontal/both/none
+
+textarea {
+	min-height: 300px;
+	resize: vertical;
+}
+
+
+// general class for inputs with buttons ( f.ex. uploads, datepicker, etc )
+
+.a-input--with-button .a-button{
+	opacity: 1;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0.6rem 1rem 0.4rem;
+}

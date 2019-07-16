@@ -1,0 +1,132 @@
+// -------------------------------------------------------------------
+// :: SECTION
+// -------------------------------------------------------------------
+
+
+.m-section{
+	padding: calc(#{$default-padding} / 2) 0;
+	position: relative;
+
+	@include FLOW-at($tablet){
+		padding: $default-padding 0;
+	}
+
+	@include FLOW-at($desktop){
+		padding: calc(#{$default-padding} * 2) 0;
+	}
+}
+
+.m-section:not(.m-section--light):not(.m-section--primary) +
+.m-section:not(.m-section--light):not(.m-section--primary){
+	@include FLOW-at($desktop){
+		margin-top: calc(#{$default-padding} * -1);
+	}
+}
+
+//***********  ELEMENTS ************//
+
+.m-section__heading{
+	position: relative;
+	z-index: 1;
+
+	> * {
+		align-items: center;
+		justify-content: center;
+		display: flex;
+
+		@include FLOW-at($tablet){
+			justify-content: flex-start;
+		}
+
+		& > *{
+			background-color: $white;
+			display: inline-block;
+			padding: 5px 10px;
+			position: relative;
+			margin-left: -13px;
+			margin-top: -7px;
+		}
+	}
+
+	&:before {
+		border-top: $border-simple;
+		content: "";
+		margin: 0 auto;
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		z-index: -1;
+	}
+}
+
+.m-section__content{
+	padding-top: 1rem;
+
+	&.m-section__content--center {
+		text-align: center;
+	}
+
+	@include FLOW-at($tablet){
+		padding-top: 2rem;
+
+		&.m-section__content--center {
+			text-align: left;
+		}
+	}
+
+	@include FLOW-at($desktop){
+		padding-top: 4rem;
+	}
+}
+
+.m-section__grid{
+	margin: 5rem 0 2rem;
+}
+
+//***********  MODIFIERS ************//
+
+
+.m-section--light{
+	background-color: $light;
+
+	.m-section__heading > * > *{
+		background-color: $light;
+	}
+}
+
+.m-section--primary{
+	background-color: $primary-color;
+
+	.m-section__heading > * > *{
+		background-color: $primary-color;
+	}
+
+}
+
+.m-section--centered{
+	text-align: center;
+
+	.m-section__heading{
+		&:before{
+			display: none;
+		}
+
+		& > *{
+			text-align: center;
+			display: block;
+		}
+	}
+}
+
+.m-section--small{
+	padding: calc(#{$default-padding} / 2) 0;
+	position: relative;
+
+	@include FLOW-at($tablet){
+		padding: $default-padding 0;
+	}
+
+	@include FLOW-at($desktop){
+		padding: calc(#{$default-padding}) 0;
+	}
+}

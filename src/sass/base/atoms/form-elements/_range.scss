@@ -1,0 +1,125 @@
+// -------------------------------------------------------------------
+// :: RANGE SLIDERS
+// -------------------------------------------------------------------
+// https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+
+input[type="range"] {
+	height: rem(24px);
+	padding: 0;
+	margin: 0;
+	border-radius: rem(12px) !important;
+
+	background: transparent;
+	cursor: pointer;
+
+	// Style input types on IOS
+	// with webkit-appearance
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	}
+
+input[type=range]::-moz-focus-outer {
+	border: none;
+}
+
+// Hide the slider on Windows
+
+input[type="range"]::-ms-track {
+	width: 100%;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+
+input[type="range"]::-moz-range-track {
+	width: 100%;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+	background: transparent;
+}
+
+// Styling the knob
+
+input[type="range"]::-webkit-slider-thumb {
+	width: rem(26px);
+	height: rem(26px);
+	border-radius: 50%;
+	border: 3px solid $light-extra;
+	background: $primary-color;
+	box-shadow: 0 0 1px $font-color-medium;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	z-index: 2;
+	position: relative;
+}
+
+input[type="range"]::-moz-range-thumb {
+	width: rem(26px);
+	height: rem(26px);
+	border-radius: 50%;
+	border: 3px solid $light-extra;
+	background: $primary-color;
+	box-shadow: 0 0 1px $font-color-medium;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	z-index: 2;
+	position: relative;
+}
+
+input[type="range"]::-ms-thumb {
+	width: rem(26px);
+	height: rem(26px);
+	border-radius: 50%;
+	border: 3px solid $light-extra;
+	background: $primary-color;
+	box-shadow: 0 0 1px $font-color-medium;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	z-index: 2;
+	position: relative;
+}
+
+// Background track
+// of the slider
+
+.a-input--range__background {
+	width: 97%;
+	height: rem(8px);
+	position: absolute;
+	top: rem(8px);
+	left: 1.5%;
+
+	background: rgba($dark, 0.08);
+	border-radius: rem(4px);
+}
+
+.a-input--range__value{
+	background: $primary-color;
+	width: 0;
+}
+
+// Tooltip
+
+.a-input--range__tooltip {
+	transform: translate(50%, 50%);
+	padding-left: 1rem;
+	left: auto !important;
+	right: -0.35rem;
+	top: rem(12px);
+	z-index: -1;
+	position: absolute !important;
+	width: 4rem;
+	text-align: center;
+
+	transition: opacity 300ms ease-in-out;
+	opacity: 0;
+}
+
+.a-input--range__tooltip:before {
+	left: 50% !important;
+}

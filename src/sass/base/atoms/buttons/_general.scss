@@ -1,0 +1,160 @@
+// -------------------------------------------------------------------
+// :: BUTTONS
+// -------------------------------------------------------------------
+// Use hyperlinks for navigation, buttons for everything else
+// Form buttons (input[type="submit", reset, ...) are normalized
+// in base/_forms.scss, but use .button classes for styling
+
+@include FLOW-normalize-buttons();
+
+
+// -------------------------------------------------------------------
+// :: BUTTON
+// -------------------------------------------------------------------
+// Solid button with full background color
+
+
+
+// -------------------------------------------------------------------
+// :: GENERAL BUTTON
+// -------------------------------------------------------------------
+
+.a-link{
+	border-color: $light;
+	color: $white;
+	padding: 12px 30px;
+	transition: $animation-fast; 
+	font-size: 0.88rem;
+	text-align: center;
+	@media (max-width: $break) {
+		display: block;
+		margin-bottom: $small-padding;
+	}
+	&--primary {
+		background: $gradient-yellow;
+		box-shadow: 0px 0px 10px rgba(249, 151, 1, 0.16);
+		&:hover {
+    		transition: $animation-fast; 	
+			box-shadow: 0px 0px 10px rgba(249, 151, 1, 0.56);
+		}
+	}
+	&--secundary {
+		background: white;
+		color: $orange;
+		box-shadow: 0px 6px 10px rgba(149, 149, 149, 0.16);
+		transition: $animation-fast; 	
+		overflow: hidden;
+		position: relative;
+		&:hover {
+    		transition: $animation-fast; 	
+			box-shadow: none;
+			box-shadow: 0px 6px 10px rgba(149, 149, 149, 0.36);
+		}
+	}
+	&[disabled] {
+		filter: none;
+	}
+	&--arrow {
+		background-size: 60%;
+		background-repeat: no-repeat;
+	}
+	&--hyperlink {
+		cursor: pointer;
+		display: block;
+		margin-top: calc(#{$default-padding} * 1);
+		&:after {
+			content: '';
+			background-image: url('../images/icons/arrow.svg');
+			background-size: 28px 28px;
+			background-position: center;
+			margin: 0 1rem;
+			height: 8px;
+			width: 28px;
+			display: inline-block;
+    		transition: $animation-fast; 
+	    }
+	    &:hover {
+	    	&:after{
+	    		margin: 0 1.4rem 0;
+	    		transition: $animation-fast; 
+	    	}
+	    } 
+	}
+}
+
+.a-phone {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: black;
+	&:hover {
+		&::before {
+			//transform: rotate(30deg);
+			-webkit-animation: animation-in 1000ms linear both;
+			animation: animation-in 1000ms linear both;
+		}
+	}
+	&::before {
+		content: "";
+		height: .88rem;
+		background-image: url('../images/icon/phone.svg');
+		background-size: 80%;
+		background-repeat: no-repeat;
+		background-position: center;
+		min-width: .88rem;
+		margin-right: .44rem;
+		-webkit-animation: animation-out 200ms linear both;
+		animation: animation-out 200ms linear both;
+	}
+	&::after {
+		@media (min-width: $break) {
+			content: "0800 12 0 12";
+		}
+	}
+}
+
+
+/* Generated with Bounce.js. Edit at https://goo.gl/rHHXMG */
+
+@-webkit-keyframes animation-in { 
+  0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  4.3% { -webkit-transform: matrix3d(1.113, 0.307, 0, 0, -0.307, 1.113, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.113, 0.307, 0, 0, -0.307, 1.113, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  8.61% { -webkit-transform: matrix3d(1.132, 0.561, 0, 0, -0.561, 1.132, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.132, 0.561, 0, 0, -0.561, 1.132, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  12.91% { -webkit-transform: matrix3d(1.121, 0.689, 0, 0, -0.689, 1.121, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.121, 0.689, 0, 0, -0.689, 1.121, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  17.22% { -webkit-transform: matrix3d(1.116, 0.719, 0, 0, -0.719, 1.116, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.116, 0.719, 0, 0, -0.719, 1.116, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  28.33% { -webkit-transform: matrix3d(1.124, 0.665, 0, 0, -0.665, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.124, 0.665, 0, 0, -0.665, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  39.44% { -webkit-transform: matrix3d(1.126, 0.645, 0, 0, -0.645, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.126, 0.645, 0, 0, -0.645, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  61.66% { -webkit-transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  83.98% { -webkit-transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100% { -webkit-transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+}
+
+@keyframes animation-in { 
+  0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  4.3% { -webkit-transform: matrix3d(1.113, 0.307, 0, 0, -0.307, 1.113, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.113, 0.307, 0, 0, -0.307, 1.113, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  8.61% { -webkit-transform: matrix3d(1.132, 0.561, 0, 0, -0.561, 1.132, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.132, 0.561, 0, 0, -0.561, 1.132, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  12.91% { -webkit-transform: matrix3d(1.121, 0.689, 0, 0, -0.689, 1.121, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.121, 0.689, 0, 0, -0.689, 1.121, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  17.22% { -webkit-transform: matrix3d(1.116, 0.719, 0, 0, -0.719, 1.116, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.116, 0.719, 0, 0, -0.719, 1.116, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  28.33% { -webkit-transform: matrix3d(1.124, 0.665, 0, 0, -0.665, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.124, 0.665, 0, 0, -0.665, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  39.44% { -webkit-transform: matrix3d(1.126, 0.645, 0, 0, -0.645, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.126, 0.645, 0, 0, -0.645, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  61.66% { -webkit-transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  83.98% { -webkit-transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100% { -webkit-transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+}
+
+@-webkit-keyframes animation-out { 
+  100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  0% { -webkit-transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+}
+
+@keyframes animation-out { 
+  0% { -webkit-transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.126, 0.65, 0, 0, -0.65, 1.126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+  100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+}
+
+
+
+// -------------------------------------------------------------------
+// :: DECORATED BUTTONS
+// -------------------------------------------------------------------
+// Decorated buttons with icons before or after a text label

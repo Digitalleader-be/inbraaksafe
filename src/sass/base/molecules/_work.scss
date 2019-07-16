@@ -1,0 +1,179 @@
+// -------------------------------------------------------------------
+// :: WORK
+// -------------------------------------------------------------------
+
+
+.m-work{
+	position: relative;
+	width: 100%;
+	margin-bottom: 5rem;
+
+	.m-work__image--yellow {
+		background-color: $yellow;
+	}
+
+	.m-work__image--green {
+		background-color: $green;
+	}
+
+	.m-work__image--aqua {
+		background-color: $aqua;
+	}
+
+	&__image {
+		position: relative;
+		width: 100%;
+		margin-left: 0;
+		padding-bottom: 50%;
+		margin: 20px 0;
+		display: block;
+		overflow: hidden;
+
+		div {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			top: 0;
+			filter: grayscale(100%);
+			opacity: 0.2;
+			background-size: cover;
+			background-position: center;
+			transition: $animation-fast;
+		}
+
+	}
+
+	&__content {
+		position: relative;
+		margin-top: 0;
+		width: 100%;
+		padding-bottom: 1rem;
+		background-color: $white;
+	}
+
+	.m-work__content__button {
+		position: relative;
+		margin: 2rem auto 0;
+		display: block;
+		width: 10rem;
+	}
+
+	.m-work__shape {
+		right: 0;
+		left: 0;
+		margin: auto;
+		top: auto;
+		width: 60%;
+		bottom: -10%;
+		position: absolute;
+		transition: $animation-fast;
+	}
+
+	&--green {
+
+		.m-work__image {
+			background-color: $green;
+		}
+
+		&:hover {
+
+			strong {
+				color: $green;
+			}
+
+		}
+
+	}
+
+	&--aqua {
+
+		.m-work__image {
+			background-color: $aqua;
+		}
+
+		&:hover {
+
+			strong {
+				color: $aqua;
+			}
+
+		}
+
+	}
+
+	&--yellow {
+
+		.m-work__image {
+			background-color: $yellow;
+		}
+
+		&:hover {
+
+			strong {
+				color: $yellow;
+			}
+
+		}
+
+	}
+
+}
+
+@include FLOW-at($desktop) {
+
+	.m-work {
+		width: 45%;
+
+		&__content {
+			margin-top: -7rem;
+			width: 85%;
+			padding: 3rem 3rem 3rem 0;
+		}
+
+		.m-work__content__button {
+			margin: 4rem 0 0;
+		}
+
+		.m-work__shape {
+			right: -30px;
+			top: 1rem;
+			width: 50%;
+			left: auto;
+			height: 100%;
+			margin-right: 0;
+			bottom: auto;
+			position: absolute;
+			transition: $animation-fast;
+
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%);
+			}
+
+		}
+
+		&:hover {
+
+			.m-work__image {
+
+				div {
+					transform: scale(1.05, 1.05);
+					opacity: 1;
+					filter: grayscale(0);
+				}
+
+			}
+
+			.m-work__shape {
+				transform: scale(1.1, 1.1);
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,46 @@
+// -------------------------------------------------------------------
+// :: PAGE-INTRO
+// -------------------------------------------------------------------
+
+.o-page-intro{
+	min-height: 50rem;
+}
+
+.o-page-intro__content{
+	padding: calc(#{$default-padding} * 5) 0 calc(#{$default-padding} * 2);
+	
+}
+
+.o-page-intro{
+
+}
+
+
+@include FLOW-at($desktop){
+
+	.o-page-intro{
+		
+	}
+
+	.o-page-intro__image {
+	}
+
+
+	.o-page-intro__content{
+		width: 40%;
+
+		p:first-of-type{
+			font-size: $font-size-large;
+			margin-bottom: 4rem;
+		}
+
+	}
+
+}
+
+@include FLOW-at($desktop-xl){
+
+	.o-page-intro{
+
+	}
+}

@@ -1,0 +1,44 @@
+// -------------------------------------------------------------------
+// :: METHOD
+// -------------------------------------------------------------------
+
+.o-slider{
+	background-color: $grey-light;
+	&--list {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		flex-wrap: wrap;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.active, &--item:hover {
+			@include FLOW-at($desktop){
+			}
+			a {
+				border-color: $orange;
+				color: $orange;
+				@include FLOW-at($desktop){
+					color: $dark;
+				}
+			}
+		}
+		&--item {
+			text-align: center;
+			margin: 0 10px;
+			width: 100%;
+			@include FLOW-at($desktop){
+				width: auto;
+			}
+			a {
+				padding: calc(#{$default-padding} * 1) 0;
+				display: block;
+				color: $dark;
+				@include FLOW-at($desktop){
+					padding: calc(#{$default-padding} * 1.5) 0;
+					border-bottom: .2em solid transparent;
+				}
+			}
+		}
+	}
+}

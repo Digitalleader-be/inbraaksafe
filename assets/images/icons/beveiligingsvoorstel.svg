@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.261 41.23">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fc8c00;
+        stroke: #fc8c00;
+        stroke-width: 0.3px;
+      }
+    </style>
+  </defs>
+  <g id="Group_299" data-name="Group 299" transform="translate(-1500.663 -3076.849)">
+    <path id="Compound_Path" data-name="Compound Path" class="cls-1" d="M49.309,16.172h.752V9.2H15.1v6.972h.752V35.684h15.8L20.818,47.07l.752.652L32.1,36.637V50.13h1V36.637L43.641,47.723l.7-.7L33.559,35.684h15.75ZM16.1,10.2H49.108v4.966H16.1Zm.8,24.478V16.172h31.4V34.681Z" transform="translate(1485.713 3067.799)"/>
+  </g>
+</svg>

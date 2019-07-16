@@ -1,0 +1,22 @@
+.m-products  {
+	background: #FAFAFA;
+	padding: calc(#{$default-padding}/2);
+	margin: .5rem 0;
+	display: flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__content {
+		justify-content: center;
+	}
+	&__image {
+		background-size: cover;
+		background-position: center;
+		display: block;
+		&:after {
+		  content: "";
+		  display: block;
+		  padding-bottom: 100%;
+		}
+	}
+}

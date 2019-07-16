@@ -1,0 +1,25 @@
+// -------------------------------------------------------------------
+// :: METHOD
+// -------------------------------------------------------------------
+
+.o-method{
+	padding: calc(#{$default-padding} * 2) 0;
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+	&--flow{
+		margin-top: 6rem;
+		&--article{
+			.icon {
+				margin: calc(#{$default-padding} * 1) 0 calc(#{$default-padding} * 1);
+				width: calc(#{$default-padding} * 1);
+				height: calc(#{$default-padding} * 1);
+				display: block;
+				box-sizing: border-box;
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+}

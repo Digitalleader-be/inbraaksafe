@@ -1,0 +1,103 @@
+// -------------------------------------------------------------------
+// :: FOOTER
+// -------------------------------------------------------------------
+.o-footer {
+	background-color: $white;
+	padding: rem(30px) rem(20px);
+
+	@include FLOW-at($tablet) {
+		padding: rem(70px) 0;
+	}
+
+	ul {
+		margin-top: calc(#{$default-padding} * 1);
+
+		li {
+			font-family: $font-family-secondary;
+			list-style: none;
+			a {
+				color: $black;
+			}
+			.orange {
+				color: $orange;
+			}
+		}
+	}
+}
+
+.o-footer__grid {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+	@include FLOW-at($tablet) {
+		flex-direction: row;
+	}
+}
+
+.o-footer__subscribe {
+	display: flex;
+	flex-wrap: wrap;
+
+	@include FLOW-at($tablet) {
+		flex-wrap: nowrap;
+	}
+
+	.o-footer__mail {
+		width: 100%;
+	}
+
+	.o-footer__subscribe__button {
+		flex-shrink: 0;
+		margin-top: 20px;
+
+		@include FLOW-at($tablet) {
+			margin-left: 15px;
+			margin-top: 0;
+		}
+	}
+}
+
+.o-footer__block  {
+	border-bottom: 3px solid rgba($grey-dark, 0.25);
+	margin-bottom: rem(30px);
+	padding-bottom: rem(35px);
+
+	.o-footer__contact {
+		margin-bottom: 0;
+	}
+
+	&:last-child {
+		border: none;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	@include FLOW-at($tablet) {
+		border: none;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+.o-footer__link {
+	background-color: transparent;
+	color: $primary-color;
+
+	&:visited {
+		background-color: transparent;
+		color: $primary-color;
+	}
+
+	&:hover {
+		background-color: $primary-color;
+		color: $black;
+		padding: 0 3px;
+	}
+}
+
+.o-footer__divider {
+	background-color: $grey-dark;
+	opacity: 0.23;
+	width: 3px;
+}

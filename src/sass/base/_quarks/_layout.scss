@@ -1,0 +1,26 @@
+// -------------------------------------------------------------------
+// :: GLOBAL LAYOUT
+// -------------------------------------------------------------------
+// body main{
+// 	// transition: transform 300ms ease-in-out 120ms;
+// 	// transform-origin: 100% 50%;
+// 	// transform: scale(1, 1) translateX(0);
+// }
+//
+// body.u-no-scroll main{
+//
+// 	// transition: transform 300ms ease-in-out 60ms;
+// 	// transform-origin: 100% 50%;
+// 	// // transform: scale(0.9, 1) translateX(40px);
+// 	// transform: scale(0.9, 1) translateX(0);
+// }
+body {
+	overflow-x: hidden;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+main {
+	min-height: calc(80vh);
+	padding-top: 70px;
+}

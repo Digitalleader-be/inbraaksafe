@@ -1,0 +1,28 @@
+{% set navs = [
+    { title: 'Home', url: 'index.html', state: 'home' },
+    { title: 'Cases', url: 'cases.html', state: 'cases' },
+    { title: 'Diensten', url: 'services.html', state: 'services' },
+    { title: 'Vacatures', url: 'vacatures.html', state: 'vacatures' }, 
+    { title: 'Contact', url: 'contact.html', state: 'contact' }
+] %}
+<div class="container">
+    <div class="o-nav twelve columns">
+        <div class="two columns">
+            <img class="logo" src="images/icon/Logo.svg">
+        </div>
+        <ul class="offset-by-one nine columns">
+            {% for nav in navs %}
+                {% if page == 'nav.state' %}
+                <li class="active">
+                {% else %}
+                <li>
+                {% endif %}
+                  <a href="{{ nav.url }}" class="a-nav-item">
+                      {{ nav.title }}
+                  </a>
+                </li>
+            {% endfor %}
+            <li><a href="#" class="a-phone a-link a-link--primary"></a></li>
+        </ul>
+    </div>
+</div>

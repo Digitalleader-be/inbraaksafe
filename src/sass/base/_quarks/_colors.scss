@@ -1,0 +1,63 @@
+// -------------------------------------------------------------------
+// :: COLORS
+// -------------------------------------------------------------------
+$orange: #FF8400;
+$yellow: #F5A602;
+$gradient-yellow: linear-gradient(to bottom right, $orange 0%, $yellow 100%);
+$black: #1F2639;
+$light-blue: #C0C2C7;
+$blue: #1F2639;
+$dark-blue: #1C2234;
+$dark-extra:    $black;
+$dark: #484848;
+$dark-lighter:    #2B2E2D;
+$aqua:       #57E8FF;
+$green: #39F3C9;
+$white: #FFFFFF;
+$grey-dark: #979797;
+$grey-darker: #D8D8D8;
+$grey: #F1F1F1;
+$grey-lighter: #F3F3F3;
+$grey-light: #FAFAFA;
+$medium:       	#3F4A59;
+$light: 		#F7F9FB;
+$light-extra:   $white;
+
+// -------------------------------------------------------------------
+// :: CONTEXTUAL COLORS
+// -------------------------------------------------------------------
+$primary-color: $orange;
+$secondary-color: $dark;
+
+$font-color:          $black; // Base
+$font-color-medium:   rgba($font-color, 0.8); // Secondary (eg. image caption)
+$font-color-light:    #808080; // Placeholders in forms
+$font-color-disabled: rgba($font-color, 0.3); // Disabled Text
+
+$background: #F7F9FB;
+$border-color: rgba($grey-dark, 0.08); // Borders and rules
+$border-color-active: #93ADD1; // Active border
+
+$ui-red:    #FFB4C2;
+$ui-orange: #FCE7AC;
+$ui-green:  #E6F1CE;
+$ui-blue:   #CAEDF3;
+
+
+$small-padding: 1rem;
+$medium-small-padding: 2rem;
+$medium-padding: 3rem;
+$medium-large-padding: 5rem;
+$large-padding:6rem;
+$xlarge-padding: 9rem;
+$xxlarge-padding: 11rem;
+
+$small-margin: 1rem;
+$medium-small-margin: 2rem;
+$medium-margin: 3rem;
+$medium-large-margin: 5rem;
+$large-margin:6rem;
+$xlarge-margin: 9rem;
+$xxlarge-margin: 11rem; 
+
+$break: 650px;

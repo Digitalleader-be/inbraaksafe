@@ -1,0 +1,12 @@
+// -------------------------------------------------------------------
+// :: BLOCKQUOTE
+// -------------------------------------------------------------------
+blockquote {
+	background-color: $dark;
+	color: $white;
+	padding: rem(22px) rem(21px) rem(14px) rem(23px);
+
+	@include FLOW-at($tablet) {
+		padding: rem(70px) rem(79px) rem(73px) rem(62px);
+  }
+}

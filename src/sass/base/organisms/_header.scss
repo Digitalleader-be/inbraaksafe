@@ -1,0 +1,188 @@
+// -------------------------------------------------------------------
+// :: HEADER
+// -------------------------------------------------------------------
+.o-header {
+	@include clearfloat;
+	background-color: $primary-color;
+	height: 70px;
+	position: fixed;
+	width: 100%;
+	z-index: 985;
+
+	&.headroom{
+		will-change: transform;
+		transition: transform 200ms linear;
+	}
+
+	&.headroom--pinned {
+		transform: translateY(0%);
+	}
+
+	&.headroom--unpinned {
+		transform: translateY(-100%);
+	}
+
+	&.headroom--pinned + .o-header__hamburger {
+		transform: translateY(0%);
+	}
+
+	&.headroom--unpinned + .o-header__hamburger{
+		transform: translateY(-300%);
+	}
+
+	&__logo {
+		margin: calc(#{$default-padding} * .4);
+		svg {
+			width: 6rem;
+		}
+	}
+
+	.o-header--inner {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		height: 70px;
+		width: calc(90% + 40px);
+		max-width: 100%;
+		margin: 0 auto;
+
+		@include FLOW-at($desktop) {
+			justify-content: flex-start;
+			width: calc(90% + 80px);
+			max-width: calc(#{$max-width} + 80px);
+			padding-left: 20px;
+		}
+	}
+
+	.o-header__navigation {
+		display: none;
+		list-style: none;
+		padding: 0;
+
+		@include FLOW-at($desktop) {
+			display: flex;
+		}
+	}
+
+	.o-header__navigation__item {
+		background-color: $primary-color;
+		color: rgba($black, 0.8);
+		display: inline-block;
+		font-family: $font-family-tertiary;
+		font-size: .75rem;
+		height: 70px;
+		padding: 20px 40px;
+		transition: background-color 0.2s ease-in;
+
+		&:hover {
+			text-decoration: none;
+			background-color: darken($primary-color, 2%);
+		}
+
+		&.o-header__navigation__item--logo {
+			font-weight: bold;
+			padding: 20px;
+			white-space: nowrap;
+
+			img{
+				display: inline;
+			}
+		}
+
+		&.is-active {
+			font-weight: bold;
+
+			background-color: $white;
+
+			&:hover {
+				background-color: $white;
+			}
+		}
+	}
+
+	&.o-header--light {
+		background-color: $grey-light;
+
+
+		.o-header__navigation__item {
+			background-color: $grey-light;
+
+			&:hover {
+				background-color: darken($grey-light, 2%);
+			}
+
+			&.is-active {
+				background-color: $white;
+
+				&:hover {
+					background-color: $white;
+				}
+			}
+		}
+	}
+}
+
+
+.o-header__hamburger {
+	position: fixed;
+	right: 5px;
+	top: 25px;
+	z-index: 960;
+	will-change: transform;
+	transition: transform 200ms linear;
+
+	@include FLOW-at($desktop) {
+		display: none;
+	}
+}
+
+.o-header__icon {
+	margin-left: 7px;
+	position: relative;
+	top: 2px;
+}
+
+
+.o-nav {
+	display: flex;
+	align-items: center;
+	margin: $small-margin 0;
+	flex-direction: row;
+	@media (max-width: $break) {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.logo {
+		margin: $small-margin auto;
+		width: 30%;
+		@media (min-width: $break) {
+			margin: 0;
+			width: 50%;
+		}
+	}
+	ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+		@media (max-width: $break) {
+			flex-direction: column;
+			li {
+				margin: $small-margin;
+			}
+		}
+		li {
+			list-style: none;
+			.a-nav-item {
+				color: $light-blue;
+				font-size: .88rem;
+				&:hover {
+					color: black;
+				}
+			}
+			.active {
+				color: $dark-blue;
+			}
+		}
+	}
+}

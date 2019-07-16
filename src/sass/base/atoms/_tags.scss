@@ -1,0 +1,22 @@
+.a-tags {
+	color: rgba($black, 0.8);
+	display: inline-block;
+	list-style-type: none;
+	padding-left: 0;
+	width: 100%;
+
+	li {
+		font-family: $font-family-secondary;
+		float: left;
+		margin-right: rem(5px);
+
+		.a__tag {
+			background-color: transparent;
+
+			&:hover {
+				color: $black;
+				background-color: $primary-color;
+			}
+		}
+	}
+}

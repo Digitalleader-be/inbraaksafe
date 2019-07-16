@@ -1,0 +1,97 @@
+// -------------------------------------------------------------------
+// :: COMPANY
+// -------------------------------------------------------------------
+
+.m-company {
+	background-color: transparent;
+	color: $black;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	margin-top: rem(30px);
+
+	&:hover {
+		background-color: transparent;
+
+		.m-company__image__overlayer {
+			opacity: 1;
+			background-color: rgba($black, 0.7);
+		}
+
+	}
+
+	@include FLOW-at($tablet){
+		margin-top: rem(125px);
+	}
+
+	&:nth-child(2n){
+		flex-direction: row-reverse;
+
+		.m-company__image__overlayer {
+			img {
+				@include FLOW-at($tablet){
+					transform: translateX(-20%);
+				}
+			}
+		}
+	}
+
+	&__image {
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		min-height: 275px;
+		position: relative;
+		width: 100%;
+
+		@include FLOW-at($tablet){
+			transform: scale(1.45);
+			width: 45%;
+			z-index: 0;
+		}
+
+		&__overlayer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			position: absolute;
+			transition: opacity 0.3s ease-in;
+
+			img {
+				flex-wrap: nowrap;
+				width: 30%;
+
+				@include FLOW-at($tablet){
+					transform: translateX(20%);
+				}
+			}
+		}
+	}
+
+	&__content {
+		background-color: $white;
+		color: $black;
+		padding: rem(30px);
+		width: 100%;
+
+		p {
+			margin-bottom: rem(30px);
+
+			@include FLOW-at($tablet){
+				margin-bottom: rem(45px);
+				margin-top: rem(30px);
+			}
+		}
+
+		@include FLOW-at($tablet){
+			margin-bottom: rem(40px);
+			margin-top: rem(40px);
+			padding: rem(80px);
+			width: 55%;
+			z-index: 1;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+// -------------------------------------------------------------------
+// :: USP
+// -------------------------------------------------------------------
+
+.m-usp {
+	margin-bottom: rem(50px);
+	display: block;
+	-webkit-column-break-inside: avoid;
+	break-inside: avoid;
+	page-break-inside: avoid;
+	width: 100%;
+
+	p {
+		margin-bottom: 0;
+	}
+
+	@include FLOW-at($tablet){
+		margin-bottom: 0;
+		width: calc(33% - 40px);
+	}
+
+	&__tags {
+		border-top: $border-simple;
+		margin-top: rem(20px);
+		padding: 0;
+		padding-top: rem(20px);
+
+		@include FLOW-at($tablet){
+			margin-top: rem(30px);
+		}
+
+	}
+}

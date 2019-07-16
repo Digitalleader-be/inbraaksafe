@@ -1,0 +1,70 @@
+// -------------------------------------------------------------------
+// :: banner
+// -------------------------------------------------------------------
+
+.m-banner {
+	background-color: $blue;
+	color: $white;
+	position: relative;
+	overflow: hidden;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: calc(#{$default-padding} * 3) 0;
+	}
+	.m-banner__content {
+		width: 100%;
+		text-align: center;
+		@include FLOW-at($desktop) {
+			//padding-right: calc(#{$default-padding} * 4);
+			text-align: left;
+			width: 50%;
+		}
+	}
+	.m-banner__buttons {
+		display: flex;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-top: $medium-padding;
+		@include FLOW-at($desktop) {
+			margin-top: 0;
+			width: 50%;
+		}
+		a {
+			margin: .22rem;
+			flex-grow: 2;
+			@include FLOW-at($desktop) {
+				flex-grow: 0;
+			}
+		}
+	}
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -100%;
+		right: -15%;
+		width: 50%;
+		bottom: -100%;
+		background-color: $dark-blue;
+		transform: rotate(30deg);
+	}
+	/*
+	&::before{
+		content: "";
+		height: 100%;
+		background-color: $dark-blue;
+		position: absolute;
+		width: 50%;
+		height: 400%;
+		right: 0;
+		top: -100%;
+		bottom: -50%;
+		display: block;
+		transform: rotate(30deg);
+		z-index: 0;
+	}*/
+}

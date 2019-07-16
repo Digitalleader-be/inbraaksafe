@@ -1,0 +1,83 @@
+// -------------------------------------------------------------------
+// :: HAMBURGER
+// -------------------------------------------------------------------
+
+.a-hamburger {
+	cursor: pointer;
+	height: rem(17px);
+	position: relative;
+	width: rem(23px);
+	margin-right: 20px;
+}
+
+
+// -------------------------------------------------------------------
+// :: HAMBURGER ELEMENTS
+// -------------------------------------------------------------------
+
+.a-hamburger__bar {
+	background-color: $black;
+	border-radius: rem(2px);
+	display: block;
+	height: rem(3px);
+	left: 0;
+	opacity: 1;
+	position: absolute;
+	transform: rotate(0deg);
+	width: 100%;
+
+	&:nth-child(1) {
+		top: 0;
+	}
+
+	&:nth-child(2),
+	&:nth-child(3) {
+		top: rem(8px);
+		width: 75%;
+		left: inherit;
+		right: 0;
+	}
+
+	&:nth-child(4) {
+		top: rem(16px);
+	}
+}
+
+
+// -------------------------------------------------------------------
+// :: HAMBURGER MODIFIERS
+// -------------------------------------------------------------------
+.o-mobile-menu {
+	.a-hamburger.is-open {
+		top: 5px;
+		right: -20px;
+	}
+
+	.a-hamburger.is-open .a-hamburger__bar {
+		background-color: $white;
+		height: rem(2px);
+		z-index: 700;
+
+		&:nth-child(1) {
+			left: 50%;
+			top: rem(9px);
+			width: 0%;
+		}
+
+		&:nth-child(2) {
+			transform: rotate(45deg);
+			width: 100%;
+		}
+
+		&:nth-child(3) {
+			transform: rotate(-45deg);
+			width: 100%;
+		}
+
+		&:nth-child(4) {
+			left: 50%;
+			top: rem(9px);
+			width: 0%;
+		}
+	}
+}

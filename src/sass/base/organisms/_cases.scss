@@ -1,0 +1,55 @@
+// -------------------------------------------------------------------
+// :: CASES
+// -------------------------------------------------------------------
+.o-cases {
+	margin-bottom: 10rem;
+	&__article {
+		background: red;
+		padding: 0;
+		display: block;
+		box-sizing: border-box;
+		position: relative;
+		margin-bottom: 1.5vw;
+		background-size: cover;
+		color: white;
+		overflow: hidden;
+		transition: $animation-easing-smooth;
+		h2 {
+			position: absolute;
+			top: 2rem;
+			left: 2rem;
+		}
+		p {
+			position: absolute;
+			bottom: 2rem;
+			left: 2rem;
+			color: white;
+		}
+		a {
+			position: absolute;
+			bottom: 2rem;
+			right: 2rem;
+			transform: translate(0, 5rem);
+		}
+		&:hover {
+			a {
+				transform: translate(0, 0);
+			}
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: $dark-blue;
+			opacity: .8;
+		}
+		&:after {
+		  content: "";
+		  display: block;
+		  padding-bottom: 100%;
+		}
+	}
+}

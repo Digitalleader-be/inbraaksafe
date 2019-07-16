@@ -1,0 +1,107 @@
+// -------------------------------------------------------------------
+// :: CULTURE GRID
+// -------------------------------------------------------------------
+.o-culture-grid{
+	margin-top: 3rem;
+}
+
+.o-culture-grid__item__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: rem(30px) rem(20px);
+	width: 100%;
+
+	@include FLOW-at($desktop){
+		padding: rem(40px);
+	}
+}
+
+.o-culture-grid__item {
+	background-color: $grey-lighter;
+	display: flex;
+	margin-bottom: 30px;
+	padding: 0;
+
+	&:hover {
+		background-color: $grey-lighter;
+		cursor: pointer;
+		color: inherit;
+		text-decoration: none;
+	}
+
+	p {
+		margin-bottom: rem(20px);
+		margin-top: rem(16px);
+		flex-grow: 1;
+
+		@include FLOW-at($desktop){
+			margin-bottom: rem(30px);
+			margin-top: rem(24px);
+		}
+	}
+
+	a {
+		flex-grow: 0;
+	}
+
+	&--image {
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		min-height: 300px;
+
+		.o-culture-grid__item__content {
+			background-color: rgba($black, 0.9);
+			color: $white;
+			opacity: 0;
+			transition: opacity 0.3s linear;
+		}
+
+		&:hover {
+			.o-culture-grid__item__content {
+				opacity: 1;
+			}
+		}
+	}
+
+	&.o-culture-grid__item-1-3 {
+
+		width: 100%;
+
+		@include FLOW-at($desktop){
+			width: calc(33% - 20px);
+		}
+	}
+
+	&.o-culture-grid__item-2-3 {
+		width: 100%;
+
+		@include FLOW-at($desktop){
+			width: calc(66% - 2px);
+		}
+
+		.o-culture-grid__item__content {
+
+			padding: rem(30px) rem(20px);
+
+			@include FLOW-at($desktop){
+				padding: rem(60px);
+
+				p {
+					max-width: 75%;
+				}
+			}
+		}
+	}
+}
+
+.o-culture-grid__row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.o-culture-grid--hidden {
+	display: none;
+}

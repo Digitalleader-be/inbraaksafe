@@ -1,0 +1,110 @@
+// -------------------------------------------------------------------
+// :: GLOBAL SETTINGS
+// -------------------------------------------------------------------
+
+// Debug breakpoints
+// - see utils/_media-queries.scss
+
+$debug-mode: false;
+
+// -------------------------------------------------------------------
+// :: MEDIA QUERIES
+// -------------------------------------------------------------------
+// Major breakpoints should be set in base/_typography.scss
+// Minor breakpoint should be added where needed (inline)
+
+$mobile:     30em; // 480px
+$tablet:     45em; // 720px
+$desktop:    60em; // 960px
+$desktop-xl: 100em; // 1600px
+
+// -------------------------------------------------------------------
+// :: FONT-SIZES
+// -------------------------------------------------------------------
+// Base-font-sizes should be set in base/_typography.scss
+//
+// - http://www.awayback.com/revised-font-stack
+// - http://practicaltypography.com/system-fonts.html
+$font-family-primary: "Sofia-Pro-Regular";
+$font-family-secondary: "Sofia-Pro-Regular";
+$font-family-tertiary: "Sofia-Pro-Regular";
+
+$font-size-xxxlarge:    48px; // h1
+$font-size-xxlarge:     33px; // h2
+$font-size-xlarge:      25px; // h3
+$font-size-text-large:      22px; // p larger
+$font-size-larger:      20px; // p larger
+$font-size-large:       19px; // h4
+$font-size:             15px; // h5
+$font-size-mediumSmall: 16px; // h5
+$font-size-medium:      17px; // default
+$font-size-small:       13px; // h6, small, cite
+
+// Default border-radius value for input elements,
+// alerts, buttons, images (in <figure>), ...
+$line-height:   1.7;
+
+// -------------------------------------------------------------------
+// :: buttons
+// -------------------------------------------------------------------
+$button-primary-height: 77px;
+$button-secondary-height: 62px;
+$button-mobile-height: 52px;
+
+// -------------------------------------------------------------------
+// :: COLORS
+// -------------------------------------------------------------------
+
+@import "_quarks/_colors";
+
+// -------------------------------------------------------------------
+// :: LAYOUT
+// -------------------------------------------------------------------
+
+$border-radius: 0.3334em; // 5px @ 16px
+$box-shadow:    0 0.25em 0 -0.1em rgba($dark, 0.045);
+$box-shadow-inset: inset 0 0.25em 0 0 $light;
+
+$default-padding: 2.5rem;
+$default-padding-mobile: $default-padding / 2;
+
+$border-simple: 3px solid $border-color;
+$max-width: 1366px;
+
+
+// -------------------------------------------------------------------
+// :: z-indexes
+// -------------------------------------------------------------------
+
+// these z-indexes are pre-defined to prevent a wildspread of z-indexes
+// try to avoid adding new z-index here, if needed you can always use $z-index-base + 1
+
+$z-index-lowest: -1;
+$z-index-lower: 0;
+$z-index-low: 1;
+
+$z-index-base: 10;
+
+$z-index-high: 100;
+$z-index-higher: 1000;
+$z-index-highest: 9999;
+
+// to use a z-index in a project, assign one of the pre-defined indexes to a variable that describes where the z-index is being used.
+// this way we have a nice overview of the indexes of all the different components in the project.
+
+$z-index-modal: $z-index-highest;
+
+
+// -------------------------------------------------------------------
+// :: Animations
+// -------------------------------------------------------------------
+$animation-fast-duration: 220ms;
+$animation-medium-duration: 660ms;
+$animation-slow-duration: 1000ms;
+$animation-easing: cubic-bezier(0.4, 0, 0.2, 1);
+$animation-easing-smooth: cubic-bezier(0.77, 0.2, 0.05, 1);
+
+$animation-fast: $animation-fast-duration $animation-easing;
+$animation-medium: $animation-medium-duration $animation-easing;
+$animation-slow: $animation-slow-duration $animation-easing;
+$animation-smooth: 0.5s  $animation-easing-smooth;

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% set title = 'Home' %}
+{% set page = 'home' %}
+
+{% block content %}
+
+{% include 'organisms/page-intro.html' %}
+{% include 'organisms/overview.html' %}
+{% include 'organisms/banner.html' %}
+
+{% include "organisms/method.html" %}
+
+{% include 'organisms/banner.html' %}
+
+{% endblock content %}
+{% block js %}
+{% endblock %}

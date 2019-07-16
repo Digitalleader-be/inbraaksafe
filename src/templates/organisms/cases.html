@@ -1,0 +1,28 @@
+<section class="o-cases">
+  <div class="container">
+    <div class="o-page-intro__content twelve columns row">
+      <div class="six columns">
+        <h5>Inbraakpreventie</h5>
+        <h1>Inbraakbeveiliging en inbraakpreventie</h1>
+      </div>
+      <p class="six columns">
+        Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper.
+      </p>
+    </div>
+    {% for i in range(0, 3) -%}
+      <div class="row">
+        {% for i in range(0, 3) -%}
+          <div class="four columns o-cases__article" style="background-image: url('https://images.vrt.be/width1280/2016/09/08/a70398c8-75c0-11e6-94b1-00163edf843f.jpg');">
+            <h2>Title {{i}}</h2>
+            <p class="captian">{{ i }}.03.19</p>
+            <a href="cases-detail.html" class="a-link a-link--primary">Bekijk deze case</a>
+          </div>
+        {%- endfor %}
+      </div>
+    {%- endfor %}
+  </div>
+</section>
+  
+<!--
+  <a href="mailto:info@inbraaksafe.be?SUBJECT=Vraag%20over%20mijn%20inbraakbeveiliging&CC=erwin@inbraaksafe.be">Vraag</a>
+-->

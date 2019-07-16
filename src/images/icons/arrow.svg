@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.904 8.205">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Arrow" transform="translate(22 -0.001)">
+    <g id="atoms-_-button-_-small-_-default-arrow" data-name="atoms-/-button-/-small-/-default-arrow" transform="translate(-22)">
+      <g id="Group-2" transform="translate(0)">
+        <g id="Group">
+          <path id="Combined-Shape" class="cls-1" d="M12.645,11.539a.73.73,0,0,1,.259.565.772.772,0,0,1-.259.565l-3.6,3.3a.921.921,0,0,1-1.234,0,.751.751,0,0,1,0-1.119L9.943,12.9H-14.136A.825.825,0,0,1-15,12.1a.825.825,0,0,1,.864-.791H9.943L7.809,9.347a.751.751,0,0,1,0-1.119.93.93,0,0,1,1.222,0Z" transform="translate(15 -8)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

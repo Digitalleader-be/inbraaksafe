@@ -1,0 +1,55 @@
+// -------------------------------------------------------------------
+// :: CTA
+// -------------------------------------------------------------------
+
+.m-cta {
+	background-color: $primary-color;
+	padding: calc(1rem * 2) 0;
+
+	@include FLOW-at($desktop) {
+		padding: calc(#{$default-padding} * 3) 0;
+	}
+
+	.m-cta__content {
+		text-align: center;
+		padding-bottom: 2rem;
+
+		@include FLOW-at($desktop) {
+			padding: 0 calc(#{$default-padding} * 2) 0 0;
+			text-align: left;
+		}
+	}
+
+	.u-container {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		@include FLOW-at($desktop) {
+			display: block;
+		}
+	}
+
+	.m-cta__content h3 {
+		font-family: $font-family-primary;
+		font-size: $font-size-medium;
+		@include FLOW-at($desktop) {
+			width: 90%;
+			padding: 8% 0;
+		}
+	}
+
+	.m-cta__shape {
+		max-width: 50%;
+
+		@include FLOW-at($desktop) {
+			padding: 0 calc(#{$default-padding} * 1);
+
+			embed {
+				margin: auto;
+				max-width: 100%;
+			}
+
+		}
+	}
+
+}

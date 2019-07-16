@@ -1,0 +1,101 @@
+// -------------------------------------------------------------------
+// :: DROPDOWN
+// -------------------------------------------------------------------
+
+.m-dropdown {
+	position: relative;
+	width: 15rem;
+	height: 3rem;
+	background-color: transparent;
+
+	@include FLOW-at($tablet){
+		width: 20rem;
+	}
+
+	.m-dropdown__arrow{
+		@extend %__icon-arrow;
+		position: absolute;
+		color: $dark;
+		top: 50%;
+		margin-top: -0.3rem;
+		right: 0.5rem;
+		font-size: 1rem;
+		z-index: 100;
+		transform: rotateZ(90deg);
+		transition: transform 0.2s ease-in;
+		line-height: 0;
+	}
+
+	a{
+		display: block;
+		background-color: transparent;
+		padding: calc(#{$default-padding} / 2.5) calc(#{$default-padding} / 2);
+		font-family: $font-family-primary;
+
+		@include FLOW-at($tablet){
+			font-size: rem($font-size-xlarge);
+		}
+
+		&:not(.is-active){
+			opacity: 0;
+			position: absolute;
+		}
+
+		&.is-active{
+			font-weight: bold;
+			letter-spacing: 1px;
+			padding-left: 0;
+
+			@include FLOW-at($tablet){
+				padding: calc(#{$default-padding} / 2.5) calc(#{$default-padding} / 2);
+			}
+		}
+
+		&:hover{
+			background-color: $light;
+			color: $dark;
+		}
+	}
+
+
+	&.is-open {
+		.m-dropdown__content{
+			box-shadow: 0 0 24px 0 rgba($black, 0.08);
+			max-height: 999px;
+			top: -0.2em;
+		}
+
+		.m-dropdown__arrow{
+			transform: rotateZ(270deg);
+		}
+
+		a{
+			opacity: 1;
+			position: relative;
+			font-family: $font-family-tertiary;
+			font-size: rem($font-size);
+
+			&.is-active{
+				padding: calc(#{$default-padding} / 2.5) calc(#{$default-padding} / 2);
+			}
+		}
+	}
+
+
+	.m-dropdown__content{
+		top: -0.3em;
+		position: absolute;
+		left: 1rem;
+		background-color: $white;
+		width: 15rem;
+		overflow: hidden;
+		max-height: 200px;
+		transition: max-height 0.2s ease-in;
+		z-index: 99;
+
+		@include FLOW-at($tablet){
+			top: -0.75em;
+			width: 20rem;
+		}
+	}
+}

@@ -1,0 +1,93 @@
+// -------------------------------------------------------------------
+// :: SUMMARY
+// -------------------------------------------------------------------
+.m-summary{
+
+	display: inline-block;
+	width: 100%;
+	margin-bottom: rem(60px);
+
+	@include FLOW-at($tablet){
+		width: calc(50% - 30px);
+	}
+
+	&__image {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		display: block;
+		height: 250px;
+		width: 100%;
+		transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+
+		@include FLOW-at($tablet){
+			height: 300px;
+		}
+
+
+		&__wrapper {
+			background-color: $yellow;
+			display: block;
+			height: 250px;
+			width: 100%;
+			overflow: hidden;
+
+			@include FLOW-at($tablet){
+				height: 300px;
+			}
+
+			&:hover {
+				.m-summary__image {
+					transform: scale(1.05, 1.05);
+					opacity: 0.9;
+				}
+
+			}
+		}
+
+	}
+
+	&__content {
+		background-color: $white;
+		margin: 0 auto;
+		padding: $default-padding;
+
+		@include FLOW-at($tablet){
+			padding: $default-padding;
+			position: relative;
+			margin-top: -100px;
+			width: 85%;
+		}
+
+		h2 {
+			a {
+				padding: 0;
+			}
+
+		}
+
+		p {
+			margin-bottom: rem(40px);
+			margin-top: rem(30px);
+		}
+
+	}
+
+	&__link {
+		align-items: center;
+		display: flex;
+		margin-top: 5px;
+
+		span {
+			font-family: $font-family-secondary;
+			margin-right: 5px;
+		}
+
+		a {
+			font-family: $font-family-tertiary;
+			font-weight: bold;
+			margin-right: 5px;
+			white-space: nowrap;
+		}
+	}
+}

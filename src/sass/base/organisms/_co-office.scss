@@ -1,0 +1,24 @@
+// -------------------------------------------------------------------
+// :: CO-OFFICE
+// -------------------------------------------------------------------
+.o-co-office {
+
+	.m-section__grid {
+		margin: 2rem 0;
+	}
+
+	.m-section__content {
+		text-align: center;
+	}
+
+	@include FLOW-at($tablet){
+
+		.m-section__grid {
+			margin: 5rem 0 2rem;
+		}
+
+		.m-section__content {
+			text-align: left;
+		}
+	}
+}

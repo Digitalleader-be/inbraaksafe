@@ -1,0 +1,35 @@
+// -------------------------------------------------------------------
+// :: WORK-INTRO
+// -------------------------------------------------------------------
+// extended version of the page intro organism. Used on the work overview page
+
+
+.o-work-intro{
+	@include FLOW-at($desktop){
+		padding: 6rem 0 0;
+
+		.o-page-intro__content{
+			width: 50%;
+		}
+	}
+}
+
+
+.o-work-intro__sectors{
+	border-top: $border-simple;
+	padding: 1rem 0;
+
+
+	@include FLOW-at($desktop){
+		padding-top: 3rem;
+	}
+
+	.a-button{
+		display: table;
+		font-size: $font-size-larger;
+
+		@include FLOW-at($desktop){
+			font-size: $font-size-xlarge;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+// -------------------------------------------------------------------
+// :: SERVICES
+// -------------------------------------------------------------------
+
+.o-services{
+	padding: 3rem 0;
+	position: relative;
+	overflow: hidden;
+	p {
+		margin-top: 1rem;
+	}
+	.m-service {
+		margin: 8rem 0;
+		&--article {
+		}
+		&--imagecontainer {
+			background-color: $grey-light;
+		    position: relative;
+		    overflow: hidden;
+			&:before{
+			    content: "";
+			    display: block;
+			    padding-top: 100%;
+			}
+			img {
+			    position:  absolute;
+			    top: 0; bottom: 0; right: 0; left: 0;
+			    object-fit: cover;
+			}
+		}
+	}
+}

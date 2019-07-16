@@ -1,0 +1,28 @@
+// -------------------------------------------------------------------
+// :: METHOD
+// -------------------------------------------------------------------
+
+.o-overview{
+	padding: calc(#{$default-padding} * 6) 0;
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+	&--flow{
+		&--article{
+			margin-top: calc(#{$default-padding} * 1);
+			p {
+				width: 75%;
+			}
+			.icon {
+				margin: $medium-padding 0 calc(#{$default-padding} * 1);
+				width: calc(#{$default-padding} * 1);
+				height: calc(#{$default-padding} * 1);
+				display: block;
+				box-sizing: border-box;
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+}

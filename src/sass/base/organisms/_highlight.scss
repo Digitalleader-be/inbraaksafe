@@ -1,0 +1,14 @@
+// -------------------------------------------------------------------
+// :: CULTURE GRID
+// -------------------------------------------------------------------
+.o-highlight {
+	align-items: center;
+	display: flex;
+	flex-direction: column-reverse;
+	margin-bottom: 40px;
+
+	@include FLOW-at($tablet) {
+		flex-direction: row;
+		margin-bottom: 0;
+	}
+}

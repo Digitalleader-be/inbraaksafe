@@ -1,0 +1,409 @@
+body.styleguide{
+	overflow-x: hidden;
+}
+
+.styleguide__index{
+	padding: 5em;
+}
+
+.styleguide__block {
+	width: 100%;
+	margin-bottom: 1rem;
+	}
+
+.styleguide__pages a{
+	text-decoration: none;
+
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+// -------------------------------------------------------------------
+// :: STYLEGUIDE LAYOUT
+// -------------------------------------------------------------------
+
+.styleguide-index{
+	margin: 50px;
+
+	section{
+		padding: 60px;
+		background-color: $white;
+		box-shadow: 0 0 30px rgba($black, 0.1);
+	}
+}
+
+
+
+.styleguide__section-title{
+	padding: 2em;
+	text-align: center;
+	background-color: $primary-color;
+	color: $white;
+	font-size: 2em;
+
+	@include FLOW-at($tablet){
+		font-size: 5em;
+	}
+
+	span{
+		color: $light;
+		font-size: 18px;
+		display: block;
+	}
+}
+
+.styleguide__title {
+	padding-top: 2em;
+	margin-top: 2em;
+	border-top: $border-simple;
+}
+
+.styleguide__title + small{
+	opacity: 0.6;
+}
+
+.styleguide__sub-title {
+	margin-top: 2.5em;
+	font-weight: bold;
+}
+
+p.styleguide__p{
+	margin: 1.5em 0;
+	font-size: 14px;
+}
+
+.styleguide__sub-title + p.styleguide__p {
+	margin-bottom: 3.5em;
+	margin-top: 0;
+}
+
+.styleguide__info {
+	color: $font-color-medium;
+	margin: 2.5em auto 0.7em;
+	display: block;
+	opacity: 0.5;
+}
+
+.styleguide__padding {
+	padding: 1em;
+}
+
+
+// Highlight box - used to
+// display code examples
+
+.styleguide__highlight-box {
+	position: relative;
+	margin-top: 2em;
+	overflow: hidden;
+	border: 1px solid $border-color;
+
+	a{
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: darken($dark, 50%);
+		transition: background-color 0.2s ease-in;
+		display: block;
+		min-width: 5.5rem;
+		padding: 10px;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 11px;
+		text-decoration: none;
+		color: $light !important;
+
+		&:hover{
+			background-color: $secondary-color;
+		}
+	}
+}
+
+.input + .styleguide__highlight-box {
+	margin-bottom: 1.5em;
+	margin-top: 0;
+}
+
+.styleguide__highlight-box code {
+	margin-top: -1px;
+	background-color: $light;
+	color: $font-color-medium;
+	line-height: 22px;
+	display: block;
+	transition: color 0.2s ease-in;
+	padding: 22px 80px 22px 22px;
+	background-image: repeating-linear-gradient(to top, transparent 0, transparent 21px, $border-color 22px, $border-color 22px);
+}
+
+.styleguide__highlight-box.is-open{
+	height: auto;
+
+	code{
+		color: $medium;
+	}
+}
+
+.styleguide__highlight-box .styleguide__info {
+	margin: 0;
+}
+
+.styleguide__highlight-box + .styleguide__sub-title{
+	border-top: 1px solid $border-color;
+	margin-top: 3rem;
+	padding-top: 4rem;
+}
+
+
+// Attention box - used to
+// highlight important pieces of information
+
+.styleguide__attention-box {
+	margin-top: 2em;
+	padding: 18px;
+	background-color: $dark;
+	color: $light;
+}
+
+.styleguide .o-header--mobile {
+	position: relative;
+}
+
+
+.styleguide__clear:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+// -------------------------------------------------------------------
+// :: COLORS
+// -------------------------------------------------------------------
+
+.styleguide__colors li {
+	min-width: 18%;
+	padding-top: 18%;
+	margin: 1% 0.5%;
+	box-shadow: 1px 1px 0.15em $border-color;
+}
+
+.styleguide__colors small {
+	width: 100%;
+	font-size: 0.9em;
+	padding: 0.5em 0.9em;
+	background: $light;
+	display: block;
+}
+
+// -------------------------------------------------------------------
+// :: INLINE LOGO'S
+// -------------------------------------------------------------------
+
+.styleguide__logo {
+	margin-right: 1.5rem;
+}
+
+.styleguide__social-icon {
+	margin-bottom: 1rem;
+	display: block;
+}
+
+[src*='tile.jpg'] {
+	max-width: 50%;
+}
+
+
+// -------------------------------------------------------------------
+// :: ICONS
+// -------------------------------------------------------------------
+
+.styleguide__icons li {
+	width: 24%;
+	margin: 0.5em 0.5%;
+	text-align: center;
+}
+
+.styleguide__icons li:before {
+	font-size: 4em;
+	margin-bottom: 0.2em;
+	display: inline-block;
+}
+
+.styleguide__icons.small__icons li:before {
+	font-size: 2em;
+}
+
+.styleguide__icons small {
+	color: $font-color-medium;
+	display: block;
+}
+
+
+// -------------------------------------------------------------------
+// :: BUTTONS
+// -------------------------------------------------------------------
+
+.styleguide__button {
+	margin: 0 0.5em 0.5em 0 !important;
+}
+
+
+// -------------------------------------------------------------------
+// :: ALERTS & TOOLTIPS
+// -------------------------------------------------------------------
+
+.styleguide__tooltip {
+	margin: 0 0.75em 0.75em 0;
+}
+
+
+// -------------------------------------------------------------------
+// :: STYLEGUIDE LAYOUT
+// -------------------------------------------------------------------
+
+.styleguide__container {
+	position: relative;
+	text-align: center;
+	padding: 0 0 7%;
+}
+
+.styleguide__nopadding{
+	padding-bottom: 0;
+}
+
+.styleguide__container main {
+	margin: 0 auto;
+	width: 90%;
+	text-align: left;
+
+	@include FLOW-at($tablet) {
+		max-width: 65em;
+		width: 80%;
+	}
+}
+
+.styleguide__grid div,
+.styleguide__slider .m-slider__item{
+	background: $light;
+	box-shadow: inset 0 0 1px $font-color-medium;
+	padding: 0.3rem;
+}
+
+.styleguide__rowgrid{
+	height: 800px;
+}
+
+.styleguide__rowgrid > div {
+	padding: 0;
+	height: 100%;
+	box-shadow: none;
+}
+
+.styleguide main{
+	padding-top: 0;
+}
+
+
+// -------------------------------------------------------------------
+// :: STYLEGUIDE IFRAME
+// -------------------------------------------------------------------
+
+.styleguide__iframe{
+	display: block;
+	min-width: 100%;
+	height: 100%;
+	border: none;
+	margin-bottom: 2em;
+	min-height: 500px;
+	overflow: auto;
+	resize: both;
+	outline: 3px dashed $border-color;
+}
+
+
+// -------------------------------------------------------------------
+// :: STICKY IN-PAGE NAVIGATION
+// -------------------------------------------------------------------
+// Using scrollNav.js - http://scrollnav.com
+
+
+.js-scroll-nav{
+	padding-top: 0;
+
+	@include FLOW-at($tablet) {
+		padding-left: 25%;
+	}
+
+	@include FLOW-at($desktop) {
+		padding-left: 15%;
+	}
+}
+
+.js-scroll-nav__title,
+.js-scroll-nav__sub-title{
+	position: relative;
+}
+
+.sg-scrollnav__anchor{
+	background-color: transparent;
+}
+
+.sg-scrollnav{
+	background: $white;
+	border-right: $border-simple;
+	position: fixed;
+	height: 100%;
+	top: 0;
+	overflow-y: scroll;
+	padding: 10px 0;
+	display: none;
+
+	@include FLOW-at($tablet) {
+		display: block;
+		width: 25% !important;
+	}
+
+	@include FLOW-at($desktop) {
+		width: 15% !important;
+	}
+
+	li{
+		list-style: none;
+	}
+
+	li ol{
+		display: none;
+		border-top: $border-simple;
+		border-bottom: $border-simple;
+		padding: 10px;
+		margin: 10px 0;
+		background-color: $light;
+	}
+
+	a{
+		color: $dark;
+		padding: 10px 20px;
+		display: block;
+	}
+
+	a.is-active{
+		font-weight: bold;
+
+		& + ol{
+			display: block;
+		}
+	}
+}
+
+// -------------------------------------------------------------------
+// :: CANVAS SHAPES
+// -------------------------------------------------------------------
+.a-shape__canvas[name*="styleguide"] {
+	position: static;
+}
+
+.styleguide-shape-collection {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}

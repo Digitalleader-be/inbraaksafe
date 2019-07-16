@@ -1,0 +1,66 @@
+// -------------------------------------------------------------------
+// :: CASE
+// -------------------------------------------------------------------
+
+
+.m-case__gutter {
+	width: 4%;
+}
+
+.m-case__item {
+	display: inline-block;
+	margin-bottom: rem(60px);
+	width: 100%;
+
+	@include FLOW-at($tablet){
+		margin-bottom: 0;
+		width: 46%;
+	}
+
+	&__image {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		height: 250px;
+		width: 100%;
+
+		@include FLOW-at($tablet){
+			height: 300px;
+		}
+	}
+
+	&__content {
+		background-color: $white;
+		margin: 0 auto;
+		padding: rem(30px) rem(25px);
+
+		@include FLOW-at($tablet){
+			padding: rem(60px) rem(50px);
+			position: relative;
+			top: -100px;
+			width: 85%;
+		}
+
+		p {
+			margin-bottom: rem(40px);
+			margin-top: rem(30px);
+		}
+
+		&__link {
+			align-items: center;
+			display: flex;
+			margin-top: 5px;
+
+			span {
+				font-family: $font-family-secondary;
+				margin-right: 5px;
+			}
+
+			a {
+				font-family: $font-family-tertiary;
+				font-weight: bold;
+			}
+		}
+
+	}
+}

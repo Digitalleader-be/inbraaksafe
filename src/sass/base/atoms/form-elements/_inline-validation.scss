@@ -1,0 +1,41 @@
+// -------------------------------------------------------------------
+// :: FEEDBACK STATES
+// -------------------------------------------------------------------
+// There are 4 possible feedback states: error, success, warning and
+// information. These should be styled based on the UI-kit colors
+
+.a-input__error {
+	align-items: center;
+	background-color: $black;
+	border-radius: 50%;
+	color: $white;
+	display: flex;
+	font-family: $font-family-primary;
+	font-weight: bold;
+	font-size: rem(15px);
+	justify-content: center;
+	height: 24px;
+	position: absolute;
+	opacity: 0;
+	top: 15px;
+	right: 20px;
+	transition: background-color 0.3s linear, opacity 0.3s linear;
+	width: 24px;
+
+	@include FLOW-at($tablet){
+		top: 20px;
+	}
+}
+
+.a-input.is-error {
+	.a-input__error {
+		opacity: 1;
+	}
+}
+
+.a-input.is-success {
+	.a-input__error {
+		background-color: $green;
+		opacity: 1;
+	}
+}

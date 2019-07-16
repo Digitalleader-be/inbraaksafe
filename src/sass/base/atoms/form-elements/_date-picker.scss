@@ -1,0 +1,32 @@
+// -------------------------------------------------------------------
+// :: DATEPICKER
+// -------------------------------------------------------------------
+// Using the Pikaday plugin - see /sass/vendor/_pikaday
+// https://github.com/dbushell/Pikaday
+
+.datepicker {
+	position: relative;
+}
+
+.datepicker input {
+	background: transparent;
+	position: relative;
+	z-index: 1;
+}
+
+.datepicker .button:not(.button-group) {
+	width: rem(54px);
+	height: rem(43px);
+	line-height: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2;
+	padding: 0.7em 0.8rem;
+}
+
+.datepicker .button span {
+	position: relative;
+	line-height: 0;
+	top: 0.7rem;
+}

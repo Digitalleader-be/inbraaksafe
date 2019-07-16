@@ -1,0 +1,73 @@
+// -------------------------------------------------------------------
+// :: services-detail-content
+// -------------------------------------------------------------------
+.o-services-contentblock {
+	padding: 3rem 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.o-services-contentblock{
+	padding: calc(4rem + 80px) 0 4rem;
+	position: relative;
+	min-height: 800px;
+	display: flex;
+	&__content {
+		margin-top: 2em;
+		width: 100%;
+		min-width: 20rem;
+		h1{
+			padding-bottom: 1rem;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.o-services-contentblock__image {
+	background-color: $grey-light;
+    position: relative;
+    overflow: hidden;
+	&:before{
+	    content: "";
+	    display: block;
+	    padding-top: 100%;
+	}
+	img {
+	    position:  absolute;
+	    top: 0; bottom: 0; right: 0; left: 0;
+	    display: block;
+	    width: 150%;
+	}
+}
+
+	.o-services-contentblock--careers{
+		min-height: 700px !important;
+	}
+
+	.o-services-contentblock--work{
+		min-height: 1150px !important;
+	}
+
+	.o-services-contentblock__content{
+		width: 40%;
+
+		p:first-of-type{
+			font-size: $font-size-large;
+			margin-bottom: 4rem;
+		}
+
+	}
+
+
+@include FLOW-at($desktop-xl){
+
+	.o-services-contentblock{
+		min-height: 950px;
+	}
+
+	.o-services-contentblock--group{
+		min-height: 800px !important;
+	}
+
+}
+

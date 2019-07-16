@@ -1,0 +1,61 @@
+// -------------------------------------------------------------------
+// :: THOUGHT
+// -------------------------------------------------------------------
+.m-thought {
+	-webkit-column-break-inside: avoid;
+	break-inside: avoid;
+	page-break-inside: avoid;
+	display: inline-block;
+	width: 100%;
+	margin-bottom: rem(60px);
+
+	@include FLOW-at($tablet){
+		width: calc(33% - 30px);
+	}
+
+	&__image {
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		display: block;
+		height: 200px;
+		margin-bottom: rem(20px);
+		width: 100%;
+
+		&:hover {
+			background-color: inherit;
+		}
+	}
+
+	&__tags {
+		border-bottom: 3px solid rgba($grey-dark, 0.13);
+
+		margin-bottom: rem(15px);
+		padding-left: 0;
+		padding-bottom: rem(10px);
+
+		@include FLOW-at($tablet){
+			margin-bottom: rem(25px);
+			padding-bottom: rem(15px);
+		}
+	}
+
+	&__content {
+		p {
+			margin-bottom: rem(40px);
+			margin-top: rem(20px);
+		}
+
+		h3 {
+			a {
+				margin: 0;
+				padding: 0;
+
+				&:hover {
+					background-color: transparent !important;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

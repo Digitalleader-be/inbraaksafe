@@ -1,0 +1,28 @@
+{% set blogs = [
+    { title: 'Home', title: 'Mindset, de weg naar een succesvol leven', text: 'Een eye-opener. Zo kan je het boek Mindset, de weg naar een succesvol leven van Carol S. Dweck wel noemen. Deze Amerikaanse psychologe beschrijft haar bijzondere ontdekkingen na tientallen jaren onderzoek naar prestatie en succes. Wat ontdekte ze? Niet alleen onze talenten en vaardigheden zorgen voor succes.', 
+    author: 'LUC STEVENS', image: 'Succesvol.jpg'},
+    { title: 'Home', title: 'Statische mindset / fixed mindset', text: 'Iemand met deze mindset gaat ervan uit dat intelligentie vast staat. Dit zorgt ervoor dat hij graag slim wil over komen. Hij vermijdt uitdagingen, want dan kun je fouten maken. Hij zoekt steeds bevestiging zijn intelligentie, persoonlijkheid of karakter.', 
+    author: 'LUC STEVENS', image: 'Static.jpg'},
+    { title: 'Home', title: 'Op groei gerichte mindset / growth mindset', text: 'Mensen zijn verschillend als het gaat om talent, interesse en temperament, maar iedereen is in staat om te veranderen door te leren en ervaringen op te doen. Iemand met deze mindset gaat er vanuit dat je jouw basiskwaliteiten kunt ontwikkelen door er moeite voor te doen.', author: 'LUC STEVENS', image: 'Grow.jpg'}
+] %}
+
+<div class="row o-blog">
+	<div class="ten offset-by-one columns m-title-block">
+		<h5>BLOG</h5>
+		<h2>Leer elke dag iets bij over mindset</h2>
+	</div>
+	{% for blog in blogs %}
+		<div class="four columns medium-padding m-blog-post fade" style="background: #F3F3F3;">
+			<div class="a-image">
+				<img src="images/{{ blog.image }}">
+			</div>
+			<h3>{{ blog.title }}</h3>
+			<h6></h6>
+			<p class="light">{{ blog.text }}</p>
+			<div class="row">
+					<p class="captian-dark six columns">{{ blog.author }}</p>
+					<a class="six columns text-right a-hyperlink" href="#">Lees verder</a>
+			</div>
+		</div>
+	{% endfor %}
+</div>

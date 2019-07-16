@@ -1,0 +1,30 @@
+// -------------------------------------------------------------------
+// :: nav item
+// -------------------------------------------------------------------
+.m-navItem{
+	display: inline-block;
+	width: 100%;
+	margin-bottom: rem(75px);
+
+	h1 {
+		margin-bottom: 30px;
+	}
+
+	p {
+		margin-bottom: 30px;
+	}
+
+	@include FLOW-at($desktop){
+		width: calc(33% - 60px);
+		margin-right: 60px;
+	}
+
+	&__wrapper {
+		border-top: 3px solid $border-color;
+		padding-top: 75px;
+
+		@include FLOW-at($desktop){
+			padding-top: 125px;
+		}
+	}
+}
